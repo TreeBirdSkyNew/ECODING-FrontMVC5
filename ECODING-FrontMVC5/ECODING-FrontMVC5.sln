@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECODING-FrontMVC5", "ECODING-FrontMVC5.csproj", "{8269AAD0-5779-460D-80B0-036A3BB0B16E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECODING-WebApiProject", "..\ECODING-WebApiProject\ECODING-WebApiProject.csproj", "{72654B34-15B2-4843-9197-7362AA5C9096}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECODING-RepositoryWrapper", "..\ECODING-RepositoryWrapper\ECODING-RepositoryWrapper.csproj", "{50505FB5-6D63-47C8-912D-5676CCFD1CBA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECODING-Repository", "..\ECODING-Repository\ECODING-Repository.csproj", "{77747AF2-3CDF-45DE-9309-1D98DB2B859A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECODING-DAL", "..\ECODING-DAL\ECODING-DAL.csproj", "{4B902D95-EE7B-4FDD-BD83-100909DDC7A9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8269AAD0-5779-460D-80B0-036A3BB0B16E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8269AAD0-5779-460D-80B0-036A3BB0B16E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8269AAD0-5779-460D-80B0-036A3BB0B16E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8269AAD0-5779-460D-80B0-036A3BB0B16E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72654B34-15B2-4843-9197-7362AA5C9096}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72654B34-15B2-4843-9197-7362AA5C9096}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72654B34-15B2-4843-9197-7362AA5C9096}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72654B34-15B2-4843-9197-7362AA5C9096}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50505FB5-6D63-47C8-912D-5676CCFD1CBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50505FB5-6D63-47C8-912D-5676CCFD1CBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50505FB5-6D63-47C8-912D-5676CCFD1CBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50505FB5-6D63-47C8-912D-5676CCFD1CBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77747AF2-3CDF-45DE-9309-1D98DB2B859A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77747AF2-3CDF-45DE-9309-1D98DB2B859A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77747AF2-3CDF-45DE-9309-1D98DB2B859A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77747AF2-3CDF-45DE-9309-1D98DB2B859A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B902D95-EE7B-4FDD-BD83-100909DDC7A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B902D95-EE7B-4FDD-BD83-100909DDC7A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B902D95-EE7B-4FDD-BD83-100909DDC7A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B902D95-EE7B-4FDD-BD83-100909DDC7A9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {27F9BBC6-21D0-4671-A6AA-2AA4961E5807}
+	EndGlobalSection
+EndGlobal

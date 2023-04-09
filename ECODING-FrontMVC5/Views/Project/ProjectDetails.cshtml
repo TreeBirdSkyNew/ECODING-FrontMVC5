@@ -1,0 +1,43 @@
+﻿@model ECODING_FrontMVC5.Models.TemplateProjectVM
+
+@{
+    ViewBag.Title = "ProjectDetails";
+}
+
+<h2>ProjectDetails</h2>
+
+<div>
+    <h4>TemplateProjectVM</h4>
+    <hr />
+
+    <table>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.TemplateProjectId)</td>
+            <td>@Html.DisplayFor(model => model.TemplateProjectId)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.TemplateProjectName)</td>
+            <td>@Html.DisplayFor(model => model.TemplateProjectName)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.TemplateProjectTitle)</td>
+            <td>@Html.DisplayFor(model => model.TemplateProjectTitle)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.TemplateProjectDescription)</td>
+            <td>@Html.DisplayFor(model => model.TemplateProjectDescription)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.TemplateProjectVersion)</td>
+            <td>@Html.DisplayFor(model => model.TemplateProjectVersion)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.TemplateProjectVersionNet)</td>
+            <td>@Html.DisplayFor(model => model.TemplateProjectVersionNet)</td>
+        </tr>
+    </table>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

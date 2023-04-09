@@ -1,0 +1,57 @@
+﻿@model IEnumerable<ECODING_DAL.TemplateProject>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TemplateProjectName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TemplateProjectTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TemplateProjectDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TemplateProjectVersion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TemplateProjectVersionNet)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TemplateProjectName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TemplateProjectTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TemplateProjectDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TemplateProjectVersion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TemplateProjectVersionNet)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.TemplateProjectId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.TemplateProjectId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.TemplateProjectId })
+        </td>
+    </tr>
+}
+
+</table>
