@@ -11,5 +11,8 @@ namespace ECODING_Repository
     {
         List<TemplateProject> GetAllTemplateProject();
         TemplateProject GetTemplateProjectById(int id);
+        void UpdateTemplateProject(TemplateProject templateProject);
+        void CreateTemplateProject(TemplateProject templateProject);
+        void DeleteTemplateProject(int id);
     }
 }

@@ -47,5 +47,15 @@ namespace ECODING_FrontMVC5.InfraStructure.Project
             }
             return null;
         }
+
+        public async Task PostTemplateProject(string api, StringContent content)
+        {
+            var httpResponseMessage = await PostObject<TemplateProjectVM>(api, content);
+        }
+
+        public async Task DeleteTemplateProject(string api)
+        {
+            var httpResponseMessage = await DeleteObject<TemplateProjectVM>(api);
+        }
     }
 }

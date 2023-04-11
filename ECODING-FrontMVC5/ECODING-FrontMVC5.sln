@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECODING-Repository", "..\EC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECODING-DAL", "..\ECODING-DAL\ECODING-DAL.csproj", "{4B902D95-EE7B-4FDD-BD83-100909DDC7A9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECODING-WebApiProject-UnitTest", "..\ECODING-WebApiProject-UnitTest\ECODING-WebApiProject-UnitTest.csproj", "{826E7034-9462-4C4C-9632-32EDC94373EB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{4B902D95-EE7B-4FDD-BD83-100909DDC7A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4B902D95-EE7B-4FDD-BD83-100909DDC7A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4B902D95-EE7B-4FDD-BD83-100909DDC7A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{826E7034-9462-4C4C-9632-32EDC94373EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{826E7034-9462-4C4C-9632-32EDC94373EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{826E7034-9462-4C4C-9632-32EDC94373EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{826E7034-9462-4C4C-9632-32EDC94373EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

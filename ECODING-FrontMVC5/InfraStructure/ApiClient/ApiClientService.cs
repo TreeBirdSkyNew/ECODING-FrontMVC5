@@ -39,6 +39,25 @@ namespace ECODING_FrontMVC5.InfraStructure.ApiClient
             return new HttpResponseMessage(System.Net.HttpStatusCode.NotFound);
         }
 
-        
+        public async Task<HttpResponseMessage> PostObject<TReturn>(string urlApi, StringContent client)
+        {
+            HttpResponseMessage httpResponseMessage = await httpClient.PostAsync(urlApi, client);
+            if (httpResponseMessage.IsSuccessStatusCode)
+            {
+                return httpResponseMessage;
+            }
+            return new HttpResponseMessage(System.Net.HttpStatusCode.NotFound);
+        }
+
+        public async Task<HttpResponseMessage> DeleteObject<TReturn>(string urlApi)
+        {
+            HttpResponseMessage httpResponseMessage = await httpClient.DeleteAsync(urlApi);
+            if (httpResponseMessage.IsSuccessStatusCode)
+            {
+                return httpResponseMessage;
+            }
+            return new HttpResponseMessage(System.Net.HttpStatusCode.NotFound);
+        }
+
     }
 }

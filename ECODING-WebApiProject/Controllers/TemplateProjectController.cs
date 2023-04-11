@@ -17,10 +17,13 @@ namespace ECODING_WebApiProject.Controllers
     public class TemplateProjectController : ApiController
     {
         private readonly IProjectRepositoryWrapper _projectRepositoryWrapper;
+        private readonly IMapper _mapper;
 
-        public TemplateProjectController(IProjectRepositoryWrapper projectRepositoryWrapper)
+        public TemplateProjectController(IProjectRepositoryWrapper projectRepositoryWrapper,
+            IMapper mapper)
         {
             _projectRepositoryWrapper = projectRepositoryWrapper;
+            _mapper = mapper;
         }
 
         [HttpGet]
@@ -36,7 +39,7 @@ namespace ECODING_WebApiProject.Controllers
                 }
                 else
                 {
-                    List<TemplateProjectVM> templateTechniquesVM = Mapper.Map<List<TemplateProjectVM>>(templateTechniques);
+                    List<TemplateProjectVM> templateTechniquesVM = _mapper.Map<List<TemplateProjectVM>>(templateTechniques);
                     return Ok(templateTechniquesVM);
                 }
             }
@@ -47,7 +50,7 @@ namespace ECODING_WebApiProject.Controllers
 
         }
 
-        [HttpGet()]
+        [HttpGet]
         [Route("TemplateProjectDetails/{id}")]
         public IHttpActionResult TemplateProjectDetails(int id)
         {
@@ -60,7 +63,7 @@ namespace ECODING_WebApiProject.Controllers
                 }
                 else
                 {
-                    TemplateProjectVM templateProjectVM = Mapper.Map<TemplateProjectVM>(templateProject);
+                    TemplateProjectVM templateProjectVM = _mapper.Map<TemplateProjectVM>(templateProject);
                     return Ok(templateProjectVM);
                 }
             }
@@ -69,5 +72,70 @@ namespace ECODING_WebApiProject.Controllers
                 return InternalServerError();
             }
         }
+
+        [HttpPost]
+        [Route("TemplateProjectCreate")]
+        public IHttpActionResult TemplateProjectCreate([FromBody] TemplateProjectVM templateProjectVM)
+        {
+            try
+            {
+                if (templateProjectVM is null)
+                {
+                    return BadRequest("templateTechnique object is null");
+                }
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest("Invalid model object");
+                }
+                TemplateProject TemplateProjectEntity = _mapper.Map<TemplateProject>(templateProjectVM);
+                _projectRepositoryWrapper.ProjectRepository.CreateTemplateProject(TemplateProjectEntity);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return InternalServerError();
+            }
+        }
+
+        [HttpPost]
+        [Route("TemplateProjectEdit")]
+        public IHttpActionResult TemplateProjectEdit([FromBody] TemplateProjectVM templateProjectVM)
+        {
+            try
+            {
+                if (templateProjectVM is null)
+                {
+                    return BadRequest("TemplateProjectEdit object is null");
+                }
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest("Invalid model object");
+                }
+                TemplateProject templateProject = _mapper.Map<TemplateProject>(templateProjectVM);
+                _projectRepositoryWrapper.ProjectRepository.UpdateTemplateProject(templateProject);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return InternalServerError();
+            }
+        }
+
+        [Route("TemplateProjectDelete/{id}")]
+        [HttpDelete]
+        public IHttpActionResult TemplateProjectDelete(int id)
+        {
+            try
+            {
+                _projectRepositoryWrapper.ProjectRepository.DeleteTemplateProject(id);
+                return Ok();
+             }
+            catch (Exception ex)
+            {
+                return InternalServerError();
+            }
+        }
     }
 }
+
+

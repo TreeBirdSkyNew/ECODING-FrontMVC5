@@ -7,7 +7,7 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "TemplateProjectCreate")
 </p>
 <table class="table">
     <tr>
@@ -53,9 +53,9 @@
             @Html.DisplayFor(modelItem => item.TemplateProjectVersionNet)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Edit", "TemplateProjectEdit", new {  id=item.TemplateProjectId }) |
             @Html.ActionLink("Details", "ProjectDetails", new {  id=item.TemplateProjectId  }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            @Html.ActionLink("Delete", "TemplateProjectDelete", new {  id=item.TemplateProjectId })
         </td>
     </tr>
 }

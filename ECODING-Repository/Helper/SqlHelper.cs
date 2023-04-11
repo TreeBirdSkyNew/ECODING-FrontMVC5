@@ -42,5 +42,25 @@ namespace ECODING_WebApiProject.Helper
                 return reader;
             }
         }
+
+        public static Int32 ExecuteNonQuery(
+            String commandText,
+            CommandType commandType, 
+            params SqlParameter[] parameters)
+        {
+            InitConnection();
+            using (_connection)
+            {
+                using (SqlCommand cmd = new SqlCommand(commandText, _connection))
+                {
+                    cmd.CommandType = commandType;
+                    cmd.Parameters.AddRange(parameters);
+
+                    _connection.Open();
+                    return cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
     }
 }

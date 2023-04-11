@@ -11,5 +11,7 @@ namespace ECODING_FrontMVC5.InfraStructure.ApiClient
     {
         Task<HttpResponseMessage> GetList<TReturn>(string api);
         Task<HttpResponseMessage> GetObject<TReturn>(string api);
+        Task<HttpResponseMessage> PostObject<TReturn>(string api, StringContent client);
+        Task<HttpResponseMessage> DeleteObject<TReturn>(string api);
     }
 }

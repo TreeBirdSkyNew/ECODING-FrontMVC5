@@ -1,4 +1,5 @@
-﻿using ECODING_Repository;
+﻿using AutoMapper;
+using ECODING_Repository;
 using ECODING_Repository.Project;
 using ECODING_RepositoryWrapper;
 using ECODING_RepositoryWrapper.Project;
@@ -56,8 +57,11 @@ namespace ECODING_WebApiProject.InfraStructure
 
         private IKernel AddRequestBindings(IKernel kernel)
         {
+            var mapperConfiguration = new MapperConfiguration(cfg => { cfg.AddProfile<MappingProfile>(); });
+            kernel.Bind<IMapper>().ToConstructor(c => new Mapper(mapperConfiguration)).InSingletonScope();
             kernel.Bind<IProjectRepositoryWrapper>().To<ProjectRepositoryWrapper>().InTransientScope();
             kernel.Bind<ITemplateProjectRepository>().To<TemplateProjectRepository>().InTransientScope();
+
             return kernel;
         }
     }

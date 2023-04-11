@@ -178,6 +178,7 @@
     <Compile Include="InfraStructure\Project\ITemplateProjectApiClient.cs" />
     <Compile Include="InfraStructure\Project\TemplateProjectApiClient.cs" />
     <Compile Include="Models\TemplateProjectVM.cs" />
+    <Compile Include="Models\TemplateProjectVMForUpdate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -232,6 +233,8 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Project\Index.cshtml" />
     <Content Include="Views\Project\ProjectDetails.cshtml" />
+    <Content Include="Views\Project\TemplateProjectEdit.cshtml" />
+    <Content Include="Views\Project\TemplateProjectCreate.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
